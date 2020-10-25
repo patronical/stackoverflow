@@ -1,0 +1,18 @@
+# set-up anaconda environment
+# launch anaconda prompt
+
+conda update -n base -c defaults conda
+conda create -n datasci python=3.8
+conda activate datasci
+conda install -y -q -c conda-forge/label/cf2020003 numpy
+conda install -y -q -c anaconda pandas
+conda install -y -q -c conda-forge/label/cf202003 matplotlib
+conda install -y -q -c anaconda notebook
+conda install -y -q -c anaconda seaborn
+conda install -y -q -c anaconda scikit-learn
+conda install -y -q -c conda-forge/label/cf202003 imbalanced-learn
+conda install -y -q -c conda-forge shap
+conda update -y -q --all
+
+# add option into Jupyter Notebook
+python -m ipykernel install --user --name datasci --display-name "Python (datasci)"
